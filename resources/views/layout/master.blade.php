@@ -49,9 +49,9 @@
               </div>
             </form>
           </div>
-          <!-- Widget [Latest Posts Widget]        -->
+          <!-- Widget [Latest Posts Widget] -->
           @include('layout.latest')
-          <!-- Widget [Categories Widget]-->
+          <!-- Widget [Categories Widget] -->
           @include('layout.category')
         </aside>
       </div>

@@ -18,7 +18,7 @@
         <!-- Navbar Brand -->
         <div class="navbar-header d-flex align-items-center justify-content-between">
         <!-- Navbar Brand -->
-        <a href="{{ url('/') }}" class="navbar-brand">{{ setting('site.title') }}</a>
+        <a href="{{ url('/') }}" class="navbar-brand"><h1>{{ setting('site.title') }}</h1></a>
         <!-- Toggle Button-->
         <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarcollapse"
                 aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
