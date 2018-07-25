@@ -65,7 +65,7 @@
               <p>&copy; {{ date('Y') }}. Todos os direitos reservados <a href="{{ url('/') }}" target="_blank">Glamour.com</a>.</p>
             </div>
             <div class="col-md-6 text-right">
-              <p>Desenvolvido por <a href="http://braianitech.tk" class="text-white">BRtech Sistemas</a></p>
+              <p>Desenvolvido por <a href="http://brtech.tk" class="text-white">BRtech Sistemas</a></p>
             </div>
           </div>
         </div>
