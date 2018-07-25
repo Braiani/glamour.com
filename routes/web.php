@@ -11,11 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PublicController@index')->name('home');
 
+Route::get('/sobre-mim', 'PublicController@showAbout')->name('about');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('/categoria/{category}', 'PublicController@showCategory')->name('category');
+Route::get('/autor/{autor}', 'PublicController@showAutor')->name('autor');
+Route::get('/{post}', 'PublicController@show')->name('post');
+Route::post('/{post}', 'CommentController@store')->name('comment');
