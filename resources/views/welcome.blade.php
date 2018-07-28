@@ -23,7 +23,7 @@
                         <a href="{{ route('post', $post->slug) }}">
                             <h3 class="h4">{{ $post->title }}</h3>
                         </a>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p class="text-muted">{{ $post->excerpt }}</p>
                         <footer class="post-footer d-flex align-items-center">
                             <a href="{{ route('autor', $post->authorId->id) }}" class="author d-flex align-items-center flex-wrap">
                                 <div class="title">
