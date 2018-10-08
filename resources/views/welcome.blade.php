@@ -10,7 +10,7 @@
                 <div class="post col-xl-6">
                     <div class="post-thumbnail">
                         <a href="{{ route('post', $post->slug) }}">
-                            <img src="{{ Voyager::image($post->image) }}" alt="..." class="img-fluid">
+                            <img src="{{ Voyager::image($post->image) }}" alt="{{ $post->excerpt }}" class="img-fluid">
                         </a>
                     </div>
                     <div class="post-details">

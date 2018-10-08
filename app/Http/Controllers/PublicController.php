@@ -31,7 +31,7 @@ class PublicController extends Controller
         $post = Post::where('slug', $slug)->withCount('comments')->firstOrFail();
 
         if (Cache::has($post->id) == false) {
-            Cache::add($post->id,'contador', 0.30);
+            Cache::add($post->id,'contador', 5);
             $post->visualizacoes += 1;
             $post->save();
         }
@@ -55,6 +55,15 @@ class PublicController extends Controller
     public function showAbout()
     {
         return view('about');
+    }
+
+    public function showSearch(Request $request)
+    {
+        $posts = Post::where('title', 'LIKE', '%' . $request->search . '%')
+                ->orWhere('excerpt', 'LIKE', '%' . $request->search . '%')
+                ->orWhere('body', 'LIKE', '%' . $request->search . '%')
+                ->paginate(4);
+        return view('welcome')->with(['posts' => $posts]);
     }
 
 }

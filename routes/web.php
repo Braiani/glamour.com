@@ -19,6 +19,7 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+Route::get('/pesquisa', 'PublicController@showSearch')->name('search');
 Route::get('/categoria/{category}', 'PublicController@showCategory')->name('category');
 Route::get('/autor/{autor}', 'PublicController@showAutor')->name('autor');
 Route::get('/{post}', 'PublicController@show')->name('post');

@@ -42,9 +42,9 @@
             <header>
               <h3 class="h6">Procurar no blog</h3>
             </header>
-            <form action="#" class="search-form">
+            <form action="{{ route('search') }}" class="search-form">
               <div class="form-group">
-                <input type="search" placeholder="O que você está procurando?">
+                <input type="search" name="search" placeholder="O que você está procurando?">
                 <button type="submit" class="submit"><i class="icon-search"></i></button>
               </div>
             </form>
@@ -65,7 +65,7 @@
               <p>&copy; {{ date('Y') }}. Todos os direitos reservados <a href="{{ url('/') }}" target="_blank">Glamour.com</a>.</p>
             </div>
             <div class="col-md-6 text-right">
-              <p>Desenvolvido por <a href="http://brtech.tk" class="text-white">BRtech Sistemas</a></p>
+              <p>Desenvolvido por <a href="http://brtechsistemas.com.br" class="text-white">BR tech Sistemas</a></p>
             </div>
           </div>
         </div>
