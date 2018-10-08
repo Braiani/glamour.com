@@ -62,7 +62,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <p>&copy; {{ date('Y') }}. Todos os direitos reservados <a href="{{ url('/') }}" target="_blank">Glamour.com</a>.</p>
+              <p>&copy; {{ date('Y') }}. Todos os direitos reservados <a href="{{ url('/') }}" target="_blank">{{ setting('site.title') }}</a>.</p>
             </div>
             <div class="col-md-6 text-right">
               <p>Desenvolvido por <a href="http://brtechsistemas.com.br" class="text-white">BR tech Sistemas</a></p>
