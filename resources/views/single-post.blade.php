@@ -43,14 +43,17 @@
                         $prev_post = $post->where('id', ($post->id - 1))->first();
                         $next_post = $post->where('id', ($post->id + 1))->first();
                     @endphp
-                    @isset($prev_post)
+                    @if(isset($prev_post))
                     <a href="{{ route('post', $prev_post->slug) }}" class="prev-post text-left d-flex align-items-center">
                         <div class="icon prev"><i class="fa fa-angle-left"></i></div>
-                        <div class="text"><strong class="text-primary">Post anterior</strong>
-                        <h6>{{ $prev_post->title }}</h6>
+                        <div class="text">
+                            <strong class="text-primary">Post anterior</strong>
+                            <h6>{{ $prev_post->title }}</h6>
                         </div>
                     </a>
-                    @endisset
+                    @else
+                        <div class="prev-post text-left d-flex align-items-center"></div>
+                    @endif
                     @isset($next_post)
                     <a href="{{ route('post', $next_post->slug) }}" class="next-post text-right d-flex align-items-center justify-content-end">
                         <div class="text">
