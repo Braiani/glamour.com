@@ -13,7 +13,7 @@
 
 Route::get('/', 'PublicController@index')->name('home');
 
-Route::get('/sobre-mim', 'PublicController@showAbout')->name('about');
+Route::get('/sobre-nos', 'PublicController@showAbout')->name('about');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

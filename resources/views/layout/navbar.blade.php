@@ -32,7 +32,7 @@
                 <a href="{{ url('/') }}" class="nav-link @if(Request::path() === '/') active @endif">Início</a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('about') }}" class="nav-link @if(Request::path() === 'sobre-mim') active @endif">Sobre mim</a>
+                <a href="{{ route('about') }}" class="nav-link @if(Request::path() === 'sobre-nos') active @endif">Sobre nós</a>
             </li>
         </ul>
         <div class="navbar-text">

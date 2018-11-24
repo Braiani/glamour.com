@@ -16,7 +16,7 @@ class PublicController extends Controller
      */
     public function index()
     {
-        $posts = Post::withCount('comments')->paginate(4);
+        $posts = Post::latest()->withCount('comments')->paginate(4);
         return view('welcome')->with(['posts' => $posts]);
     }
 
@@ -31,7 +31,7 @@ class PublicController extends Controller
         $post = Post::where('slug', $slug)->withCount('comments')->firstOrFail();
 
         if (Cache::has($post->id) == false) {
-            Cache::add($post->id,'contador', 5);
+            Cache::add($post->id, 'contador', 5);
             $post->visualizacoes += 1;
             $post->save();
         }
@@ -65,5 +65,4 @@ class PublicController extends Controller
                 ->paginate(4);
         return view('welcome')->with(['posts' => $posts]);
     }
-
 }
