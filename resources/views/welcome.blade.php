@@ -15,7 +15,7 @@
                     </div>
                     <div class="post-details">
                         <div class="post-meta d-flex justify-content-between">
-                            <div class="date meta-last">{{ $post->created_at->format('j F | Y') }}</div>
+                            <div class="date meta-last">{{ $post->created_at->formatLocalized('%d, %B | %Y') }}</div>
                             <div class="category">
                                 <a href="{{ route('category', $post->category->slug) }}">{{ $post->category->name }}</a>
                             </div>

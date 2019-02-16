@@ -5,7 +5,7 @@
         <title>{{ setting('site.title') }} | @yield('title', 'Início')</title>
 
         <!-- Bootstrap CSS-->
-        <link rel="stylesheet" href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('vendor/bootstrap/css/bootstrap.css')}}">
         <!-- Font Awesome CSS-->
         <link rel="stylesheet" href="{{asset('vendor/font-awesome/css/font-awesome.min.css')}}">
         <!-- Custom icon font-->
@@ -18,12 +18,14 @@
         <link rel="stylesheet" href="{{asset('css/style.default.css')}}" id="theme-stylesheet">
         <!-- Custom stylesheet - for your changes-->
         <link rel="stylesheet" href="{{asset('css/custom.css')}}">
+        @stack('css')
         @toastr_css
         <!-- Favicon-->
         <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
         <!-- Tweaks for older IEs--><!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
     </head>
   <body>
     <header class="header">
@@ -62,7 +64,7 @@
               <p>&copy; {{ date('Y') }}. Todos os direitos reservados <a href="{{ url('/') }}" target="_blank">{{ setting('site.title') }}</a>.</p>
             </div>
             <div class="col-md-6 text-right">
-              <p>Desenvolvido por <a href="http://brtechsistemas.com.br" class="text-white">BR tech Sistemas</a></p>
+              <p>Desenvolvido com <i class="fa fa-heart"></i> por <a href="http://brtechsistemas.com.br" class="text-white">BR tech Sistemas</a></p>
             </div>
           </div>
         </div>

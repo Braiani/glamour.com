@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\About;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Category;
@@ -9,6 +10,15 @@ use Illuminate\Support\Facades\Cache;
 
 class PublicController extends Controller
 {
+    /**
+     * PublicController constructor.
+     */
+    public function __construct()
+    {
+        setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -54,7 +64,8 @@ class PublicController extends Controller
 
     public function showAbout()
     {
-        return view('about');
+        $abouts = About::all();
+        return view('about')->with(['abouts' => $abouts]);
     }
 
     public function showSearch(Request $request)
